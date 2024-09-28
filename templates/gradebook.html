@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>GradeBook</title>
+    <style>
+        /* Basic Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff; /* Light background */
+        }
+        header {
+            background-color: #003366; /* Dark blue background */
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        .logo-placeholder {
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => {
+                section.style.display = 'none'; // Hide all sections
+            });
+            document.getElementById(sectionId).style.display = 'block'; // Show the selected section
+        }
+
+        function confirmLogout() {
+            const confirmation = confirm("Do you really want to logout?");
+            if (confirmation) {
+                window.location.href = '/logout'; 
+            }
+        }
+    </script>
+</head>
+<body onload="showSection('assignments')">
+
+<header>
+    <div class="logo-placeholder">
+        <img src="images/logo.png" alt="GradeBook Logo" style="width: 50px; height: auto;">
+    </div>
+    <h1 style="display:inline-block; vertical-align:middle;">GradeBook</h1>
+    <nav>
+        <ul>
+            <li><a href="javascript:void(0);" onclick="showSection('assignments')">Assignments</a></li>
+            <li><a href="javascript:void(0);" onclick="showSection('resources')">Study Resources</a></li>
+            <li><a href="javascript:void(0);" onclick="showSection('profile_settings')">Profile & Settings</a></li>
+        </ul>
+    </nav>
+</header>
