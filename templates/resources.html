@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assignments - GradeBook</title>
+    <title>Study Resources - GradeBook</title>
     <style>
         /* Basic Styles */
         body {
@@ -26,54 +26,38 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             max-width: 600px;
         }
-        .form-group {
-            margin-bottom: 15px;
+        .resources-list {
+            list-style-type: none;
+            padding: 0;
         }
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-        }
-        .form-group input {
-            width: calc(100% - 20px);
+        .resources-list li {
+            margin: 10px 0;
             padding: 10px;
-            border: 1px solid #ccc;
+            border: 1px solid #003366; /* Dark blue border */
             border-radius: 5px;
-            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+            background-color: #e7f3fe; /* Light blue background for links */
         }
-        button {
-            padding: 10px 15px;
-            background-color: #003366; /* Dark blue button */
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #00509e; /* Lighter blue on hover */
+        .resources-list a {
+            text-decoration: none;
+            color: #003366; /* Dark blue text */
         }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>GradeBook - Assignments</h1>
+    <h1>GradeBook - Study Resources</h1>
 </header>
 
-<!-- Assignments Section -->
-<div class="content-section" id="assignments">
-    <h2>Assignments</h2>
-    <p>Submit your assignments here. Make sure to attach the necessary documents.</p>
-    <form action="/submit_assignment" method="POST" enctype="multipart/form-data">
-        <div class="form-group">
-            <label for="assignment-title">Title:</label>
-            <input type="text" id="assignment-title" name="title" required>
-        </div>
-        <div class="form-group">
-            <label for="assignment-file">Attach Document:</label>
-            <input type="file" id="assignment-file" name="file" accept=".pdf,.doc,.docx" required>
-        </div>
-        <button type="submit">Submit Assignment</button>
-    </form>
+<!-- Study Resources Section -->
+<div class="content-section" id="resources">
+    <h2>Study Resources</h2>
+    <ul class="resources-list">
+        <li><a href="https://ncert.nic.in" target="_blank">NCERT Books</a></li>
+        <li><a href="https://jeecourse.com" target="_blank">JEE PYQs</a></li>
+        <li><a href="https://neetprep.com" target="_blank">NEET PYQs</a></li>
+        <li><a href="https://hsc.ac.in" target="_blank">HSC PYQs</a></li>
+    </ul>
 </div>
 
 </body>

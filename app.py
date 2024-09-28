@@ -5,6 +5,7 @@ from model import Base, User
 import os
 
 app = Flask(__name__)
+app = Flask(__name__, static_folder='static')
 app.secret_key = 'ITSAHACKATHON_ET4_teamnova'  
 
 # Database configuration
