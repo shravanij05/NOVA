@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Page</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #071739, #4b6382);
+            font-family: 'Arial', sans-serif;
+            height: 100vh;
+            margin: 0;
+            color: #333;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .info {
+            max-width: 500px;
+            background-color: transparent;
+            padding: 20px;
+            border-radius: 10px;
+            color: #62a0c4;
+            text-align: left;
+            margin-left: 100px;
+            font-family: 'Roboto Slab', Roboto Slab;
+            font-size: 18px;
+            font-weight: normal;
+        }
+        .container {
+            background-color: #e6ebe1;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            width: 350px;
+            text-align: center;
+            transition: transform 0.3s;
+            margin-right: 200px;
+        }
+        .container:hover {
+            transform: scale(1.02);
+        }
+        h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #071739;
+            font-weight: bold;
+        }
+        .input-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        label {
+            margin-bottom: 5px;
+            display: block;
+            font-weight: bold;
+            color: #071739;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        select {
+            width: 90%;
+            padding: 10px;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="password"]:focus,
+        select:focus {
+            border-color: #00796b;
+            box-shadow: 0 0 8px rgba(0, 121, 107, 0.5);
+            outline: none;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #1b264c;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        button:hover {
+            background-color: #194569;
+            transform: translateY(-2px);
+        }
+        .message {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #555;
+        }
+        .message a {
+            color: #071739;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .message a:hover {
+            text-decoration: underline;
+        }
+        select {
+        width: 40%; /* Adjust this percentage to make it smaller */
+        padding: 10x;
+        border: 2px solid #ccc;
+        border-radius: 8px;
+        transition: border-color 0.3s, box-shadow 0.3s;
+    }
+    </style>
+</head>
+<body>
+    <div class="info">
+        <h2>Join GradeBook!</h2>
+        <p>The all-in-one solution for managing homework submissions and grading. Our platform streamlines the entire process, making it easier for students to submit assignments and for teachers to efficiently review and grade them. With features like file attachments, real-time feedback, and automated notifications, GradeBook enhances communication between students and teachers while providing a clear overview of academic performance. Say goodbye to the hassle of manual grading and paperwork, and enjoy a seamless classroom management experience with GradeBook!</p>
+    </div>
+    <div class="container">
+        <h1>Register Here</h1>
+        <form action="/register" method="POST">
+            <div class="input-group">
+                <label for="role">I am a..</label>
+                <select id="role" name="role" required>
+                    <option value="" disabled selected>Select Role</option>
+                    <option value="student">Student</option>
+                    <option value="teacher">Teacher</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit">Register</button>
+            <p class="message">Already registered? <a href="login.html">Login here</a></p>
+        </form>
+    </div>
+</body>
+</html>

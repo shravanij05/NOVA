@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #071739, #4b6382);
+            font-family: 'Arial', sans-serif;
+            height: 100vh;
+            margin: 0;
+            color: #333;
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+        }
+        .info {
+            max-width: 500px;
+            background-color: transparent; 
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: none; 
+            color: #62a0c4;
+            text-align: left;
+            margin-left: 100px;
+            font-family: 'Roboto Slab', Roboto Slab; 
+            font-size: 18px; 
+            font-weight: normal; 
+        }
+        .container {
+            background-color: #e6ebe1;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            width: 350px;
+            text-align: center;
+            transition: transform 0.3s;
+            margin-right: 200px;
+        }
+        .container:hover {
+            transform: scale(1.02);
+        }
+        h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #071739;
+            font-weight: bold;
+        }
+        .input-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        label {
+            margin-bottom: 5px;
+            display: block;
+            font-weight: bold;
+            color: #071739;
+        }
+        input[type="text"],
+        input[type="password"],
+        select {
+            width: 90%;
+            padding: 12px;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        input[type="text"]:focus,
+        input[type="password"]:focus,
+        select:focus {
+            border-color: #00796b;
+            box-shadow: 0 0 8px rgba(0, 121, 107, 0.5);
+            outline: none;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #1b264c;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        button:hover {
+            background-color: #194569;
+            transform: translateY(-2px);
+        }
+        .message {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #555;
+        }
+        .message a {
+            color: #071739;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .message a:hover {
+            text-decoration: underline;
+        }
+        select {
+        width: 40%; 
+        padding: 10x;
+        border: 2px solid #ccc;
+        border-radius: 8px;
+        transition: border-color 0.3s, box-shadow 0.3s;
+    }
+    </style>
+</head>
+<body>
+    <div class="info">
+        <h2>Welcome to GradeBook!</h2>
+        <p>Log in to access your personalized dashboard. As a student, you can submit assignments and check your grades. Teachers can review submissions and provide feedback. If you don't have an account yet, please register to get started!</p>
+    </div>
+    <div class="container">
+        <h1>Login Here</h1>
+        <form action="/login" method="POST">
+            <div class="input-group">
+                <label for="role">I am a..</label>
+                <select id="role" name="role" required>
+                    <option value="" disabled selected>Select Role</option>
+                    <option value="student">Student</option>
+                    <option value="teacher">Teacher</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit">Login</button>
+            <p class="message">Not registered? <a href="/register">Register here</a></p>
+        </form>
+    </div>
+</body>
+</html>
