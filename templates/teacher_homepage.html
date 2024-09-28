@@ -114,7 +114,7 @@
 
     <div class="navbar">
         <div class="logo">
-            <img src="images/logo.png" alt="GradeBook Logo">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="GradeBook Logo">
             <h1>GradeBook</h1>
         </div>
         <div class="welcome-message">Welcome, educators! Manage your classes, review assignments, and provide timely feedback all in one place.</div>
@@ -124,7 +124,7 @@
         </div>
         <div class="user-profile">
             <button>
-                <img src="images/s.png" alt="User Icon">
+                <img src="{{ url_for('static', filename='images/s.png') }}" alt="User Icon">
               
             </button>
         </div>
@@ -132,7 +132,7 @@
 
     <div class="container">
         <div class="left-section">
-            <img src="images/desk.png" alt="Illustration of user at desk">
+            <img src="{{ url_for('static', filename='images/desk.png') }}" alt="Illustration of user at desk">
         </div>
 
         <div class="right-section">
